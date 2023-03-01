@@ -1,10 +1,12 @@
 ﻿@inherits LayoutComponentBase
 
-<PageTitle>BlazorShowcase.Host.ServerSide</PageTitle>
+<PageTitle>BlazorShowcase</PageTitle>
 
 <div class="page @AppOptionsService.ThemeCssClassString"
      style="@AppOptionsService.FontSizeCssStyleString">
+    
     <BlazorCommon.RazorLib.BlazorCommonInitializer/>
+    <BlazorTextEditor.RazorLib.BlazorTextEditorInitializer/>
     
     <div class="sidebar">
         <NavMenu/>
@@ -13,6 +15,11 @@
     <main>
         <div class="top-row px-4">
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            
+            <button class="bcrl_button"
+                    @onclick="OpenSettingsDialogOnClick">
+                Settings
+            </button>
         </div>
 
         <article class="content px-4">

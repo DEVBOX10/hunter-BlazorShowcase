@@ -16,12 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Shared\MainLayout.razor" />
-      <AdditionalFiles Include="Shared\NavMenu.razor" />
-      <AdditionalFiles Include="Shared\SurveyPrompt.razor" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\..\Blazor.Text.Editor\BlazorTextEditor.RazorLib\BlazorTextEditor.RazorLib.csproj" />
     </ItemGroup>
 
