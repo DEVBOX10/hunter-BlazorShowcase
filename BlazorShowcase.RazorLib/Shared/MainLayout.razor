@@ -2,7 +2,10 @@
 
 <PageTitle>BlazorShowcase.Host.ServerSide</PageTitle>
 
-<div class="page">
+<div class="page @AppOptionsService.ThemeCssClassString"
+     style="@AppOptionsService.FontSizeCssStyleString">
+    <BlazorCommon.RazorLib.BlazorCommonInitializer/>
+    
     <div class="sidebar">
         <NavMenu/>
     </div>

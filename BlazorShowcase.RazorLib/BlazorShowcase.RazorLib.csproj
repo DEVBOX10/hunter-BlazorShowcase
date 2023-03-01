@@ -21,4 +21,8 @@
       <AdditionalFiles Include="Shared\SurveyPrompt.razor" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\BlazorCommon\BlazorCommon.RazorLib\BlazorCommon.RazorLib.csproj" />
+    </ItemGroup>
+
 </Project>
