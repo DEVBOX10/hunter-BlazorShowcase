@@ -8,11 +8,17 @@
 
 
     <ItemGroup>
-        <SupportedPlatform Include="browser"/>
+        <SupportedPlatform Include="browser" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.14"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.14" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Shared\MainLayout.razor" />
+      <AdditionalFiles Include="Shared\NavMenu.razor" />
+      <AdditionalFiles Include="Shared\SurveyPrompt.razor" />
     </ItemGroup>
 
 </Project>
