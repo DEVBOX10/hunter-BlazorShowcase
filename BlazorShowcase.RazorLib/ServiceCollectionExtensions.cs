@@ -1,4 +1,5 @@
 ﻿using BlazorCommon.RazorLib;
+using BlazorTextEditor.RazorLib;
 using Fluxor;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,12 +12,16 @@ public static class ServiceCollectionExtensions
         services.AddFluxor(options => 
             options.ScanAssemblies(
                 typeof(ServiceCollectionExtensions).Assembly,
-                typeof(BlazorCommon.RazorLib.ServiceCollectionExtensions).Assembly));
+                typeof(BlazorCommon.RazorLib.ServiceCollectionExtensions).Assembly,
+                typeof(BlazorTextEditor.RazorLib.ServiceCollectionExtensions).Assembly));
         
-        return services
-            .AddBlazorCommonServices(options => options with
-            {
-                InitializeFluxor = false
-            });
+        // TODO: Standardize the way options are modified. AddBlazorCommonServices is a record yet AddBlazorTextEditor is a settable class 
+        services.AddBlazorCommonServices(options => options with
+        {
+            InitializeFluxor = false
+        });
+
+        return services.AddBlazorTextEditor(options => 
+            options.InitializeFluxor = false);
     }
 }
