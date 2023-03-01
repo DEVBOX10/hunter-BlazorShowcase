@@ -1,5 +1,40 @@
-﻿<h3>SettingsDialog</h3>
+﻿@using BlazorCommon.RazorLib.Options
+@using BlazorTextEditor.RazorLib.HelperComponents
 
-@code {
+<div class="bsrl_settings">
     
-}
+    <div class="bsrl_settings-scope">
+        <div class="bsrl_settings-scope-title bsrl_larger-font-size">
+            Application Settings
+        </div>
+        
+        <div class="bsrl_settings-scope-body bcrl_indent-child-content">
+            
+            <div class="bsrl_settings-scope-border"></div>
+            
+            <InputAppFontSize/>
+            <InputAppIconSize/>
+            <InputAppTheme/>
+        </div>
+    </div>
+    
+    <div class="bsrl_settings-scope">
+        <div class="bsrl_settings-scope-title bsrl_larger-font-size">
+            Text Editor Settings
+        </div>
+        
+        <div class="bsrl_settings-scope-body bcrl_indent-child-content">
+            
+            <div class="bsrl_settings-scope-border"></div>
+            
+            <TextEditorSettingsPreview/>
+            <TextEditorInputFontSize/>
+            <TextEditorInputCursorWidth/>
+            <TextEditorInputHeight/>
+            <TextEditorInputShowNewLines/>
+            <TextEditorInputShowWhitespace/>
+            <TextEditorInputTheme/>
+            <TextEditorInputKeymap/>
+        </div>
+    </div>
+</div>

@@ -69,6 +69,26 @@ main {
 }
 
 div.top-row {
-    background-color: var(--bcrl_secondary-background-color);
-    color: var(--bcrl_secondary-foreground-color);
+    background-color: var(--bcrl_tertiary-background-color);
+    color: var(--bcrl_tertiary-foreground-color);
 }
+
+.bsrl_settings {
+    padding: 5px;
+}
+
+.bsrl_settings-scope-title {
+    color: var(--bcrl_primary-emphasis-foreground-color);
+}
+
+.bsrl_settings-scope-body > div {
+    padding: 7px 5px;
+    margin-bottom: 7px;
+}
+
+.bsrl_larger-font-size {
+    font-size: 1.3em;
+}
+
+
+
