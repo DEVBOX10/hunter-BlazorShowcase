@@ -90,5 +90,6 @@ div.top-row {
     font-size: 1.3em;
 }
 
-
-
+main > article {
+    height: calc(100% - var(--bsrl_top-row-height))
+}
