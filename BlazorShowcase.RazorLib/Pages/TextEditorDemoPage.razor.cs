@@ -1,6 +1,8 @@
 ﻿using BlazorTextEditor.RazorLib;
 using BlazorTextEditor.RazorLib.Model;
+using BlazorTextEditor.RazorLib.Store.Model;
 using BlazorTextEditor.RazorLib.ViewModel;
+using Fluxor;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorShowcase.RazorLib.Pages;
@@ -9,6 +11,8 @@ public partial class TextEditorDemoPage : SingleComponentPage
 {
     [Inject]
     private ITextEditorService TextEditorService { get; set; } = null!;
+    [Inject]
+    private IState<TextEditorModelsCollection> TextEditorModelsCollectionWrap { get; set; } = null!;
 
     private static readonly TextEditorModelKey TextEditorDemoModelKey = TextEditorModelKey.NewTextEditorModelKey();
     private static readonly TextEditorViewModelKey TextEditorDemoViewModelKey = TextEditorViewModelKey.NewTextEditorViewModelKey();

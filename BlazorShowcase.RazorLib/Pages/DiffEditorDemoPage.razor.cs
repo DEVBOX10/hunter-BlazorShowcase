@@ -37,7 +37,7 @@ public partial class DiffEditorDemoPage : SingleComponentPage
         TextEditorService.ModelRegisterTemplatedModel(
             DiffEditorDemoAfterModelKey,
             WellKnownModelKind.CSharp,
-            "textEditorDemo.txt",
+            "textEditorDemoAfter.txt",
             DateTime.UtcNow,
             "C#",
             "ABCDEFG");
