@@ -20,7 +20,7 @@ public static class ServiceCollectionExtensions
             }
         });
         
-        return services.AddFluxor(options => 
+         return services.AddFluxor(options =>
             options.ScanAssemblies(
                 typeof(ServiceCollectionExtensions).Assembly,
                 typeof(BlazorCommon.RazorLib.ServiceCollectionExtensions).Assembly,
