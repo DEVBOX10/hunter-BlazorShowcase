@@ -30,6 +30,7 @@ public partial class MainLayout : LayoutComponentBase, IDisposable
             SettingsDisplay.SettingsDialogKey,
             "Settings",
             typeof(SettingsDisplay),
+            null,
             null)
         {
             IsResizable = true
