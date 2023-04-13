@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
 }
 
 main {
@@ -48,6 +48,11 @@ main {
 
     .top-row a, .top-row .btn-link {
         margin-left: 0;
+    }
+
+    article {
+        height: calc(100vh - 112px);
+        overflow: auto;
     }
 }
 
