@@ -13,12 +13,7 @@
     </div>
 
     <main>
-        <div class="top-row px-4">
-            <button class="bcrl_button"
-                    @onclick="OpenSettingsDialogOnClick">
-                Settings
-            </button>
-        </div>
+        <TopRow OpenSettingsDialogOnClick="OpenSettingsDialogOnClick"/>
 
         <article class="content px-4">
             @Body

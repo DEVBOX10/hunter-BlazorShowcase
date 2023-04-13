@@ -1,7 +1,15 @@
 ﻿@page "/"
+@using BlazorTextEditor.RazorLib.ViewModel
+@using BlazorShowcase.RazorLib.WellKnownModelKindCase
+@inherits SingleComponentPage
 
-<h3>Index</h3>
-
-@code {
+<h3>
+    Text Editor Demo
     
-}
+    <WellKnownModelKindSelect/>
+</h3>
+
+<hr/>
+
+<TextEditorViewModelDisplay TextEditorViewModelKey="TextEditorDemoViewModelKey"
+                            WrapperStyleCssString="@CssStyleTextEditorViewModelDisplay"/>

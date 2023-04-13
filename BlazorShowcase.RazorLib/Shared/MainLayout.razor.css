@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 main {
@@ -30,6 +31,12 @@ main {
         text-overflow: ellipsis;
     }
 
+.bsrl_justify-space-between {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+    
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {
         display: none;
