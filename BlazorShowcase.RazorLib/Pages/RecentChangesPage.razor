@@ -1,0 +1,63 @@
+﻿@page "/recentChanges"
+
+<h3>
+    <em class="bcrl_em">v7.1.0</em>
+</h3>
+
+<hr/>
+
+<div class="bsrl_paragraph">
+    <em class="bcrl_em">FIXED:</em>
+    A bug was introduced in v7.0.0 where the <span class="bte_type">TextEditorViewModel</span> Blazor component was not being
+    disposed of properly. This bug would crash the application. This bug has been fixed.
+</div>
+
+<div class="bsrl_paragraph">
+    <em class="bcrl_em">CHANGE:</em>
+    Replace <span class="bte_type">Task</span>.<span class="bte_method">Run</span>(...)
+    invocations with the <span class="bte_type">BackgroundService</span> named "<span class="bte_type">QueuedHostedService</span>"
+</div>
+
+<div class="bsrl_paragraph">
+    <em class="bcrl_em">ADDED:</em>
+    An <span class="bte_type">ILexer</span> implementation which performs syntactic lexing for a given language definition.
+    
+    <br/>
+    
+    <a href="https://github.com/huntercfreeman/Blazor.Text.Editor/tree/main/BlazorTextEditor.RazorLib/Analysis/GenericLexer"
+       target="_blank">
+        (GenericLexer Source Code)
+    </a>
+</div>
+
+<div class="bsrl_paragraph">
+    <em class="bcrl_em">CHANGE:</em>
+    The following languages (<span class="bte_type">WellKnownModelKinds</span>)
+    now use the Generic Lexer:
+    
+    <ul>
+        <li>CSharp</li>
+        <li>FSharp</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+    </ul>
+</div>
+
+<div class="bsrl_paragraph">
+    <em class="bcrl_em">ADDED:</em>
+    When rendering a Text Editor, the footer now additionally displays the current overall character position.
+</div>
+
+<div class="bsrl_paragraph">
+    <em class="bcrl_em">ADDED:</em>
+    The <span class="bte_type">TextEditorViewModel</span> now has two collections of
+    <span class="bte_type">TextEditorPresentationModel</span>.
+    
+    The names of these collections are:
+    <ul>
+        <li>FirstPresentationLayer</li>
+        <li>LastPresentationLayer</li>
+    </ul>
+</div>
+
+

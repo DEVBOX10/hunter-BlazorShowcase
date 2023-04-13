@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
@@ -30,6 +31,12 @@ main {
         text-overflow: ellipsis;
     }
 
+.bsrl_justify-space-between {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+    
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {
         display: none;
@@ -41,6 +48,11 @@ main {
 
     .top-row a, .top-row .btn-link {
         margin-left: 0;
+    }
+
+    article {
+        height: calc(100vh - 112px);
+        overflow: auto;
     }
 }
 

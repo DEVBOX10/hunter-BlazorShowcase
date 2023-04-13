@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Fluxor.Blazor.Web.Components;
+using Microsoft.AspNetCore.Components;
 
 namespace BlazorShowcase.RazorLib.Pages;
 
-public class SingleComponentPage : ComponentBase
+public class SingleComponentPage : FluxorComponent
 {
     protected const string LINE_HEIGHT_OF_H3 = "1.2";
     protected const string HEIGHT_OF_H3 = $"calc(calc(1.3rem + .6vw) * {LINE_HEIGHT_OF_H3})";
