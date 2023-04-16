@@ -1,5 +1,4 @@
 ﻿using Fluxor.Blazor.Web.Components;
-using Microsoft.AspNetCore.Components;
 
 namespace BlazorShowcase.RazorLib.Pages;
 
