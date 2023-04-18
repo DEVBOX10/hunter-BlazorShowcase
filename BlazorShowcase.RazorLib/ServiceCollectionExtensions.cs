@@ -1,8 +1,8 @@
 ﻿using BlazorCommon.RazorLib.BackgroundTaskCase;
 using BlazorCommon.RazorLib.ComponentRenderers;
 using BlazorCommon.RazorLib.Notification;
-using BlazorCommon.RazorLib.WatchWindow.TreeViewImplementations;
-using BlazorCommon.RazorLib.WatchWindow.WatchWindowExample;
+using BlazorCommon.RazorLib.WatchWindow;
+using BlazorCommon.RazorLib.WatchWindow.TreeViewDisplays;
 using BlazorTextEditor.RazorLib;
 using Fluxor;
 using Microsoft.Extensions.DependencyInjection;
