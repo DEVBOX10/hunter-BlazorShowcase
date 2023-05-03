@@ -24,7 +24,7 @@ public partial class MainLayout : LayoutComponentBase, IDisposable
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await TextEditorService.OptionsSetFromLocalStorageAsync();
+        await TextEditorService.Options.SetFromLocalStorageAsync();
         
         await base.OnAfterRenderAsync(firstRender);
     }

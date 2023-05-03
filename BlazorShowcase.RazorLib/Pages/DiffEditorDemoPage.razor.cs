@@ -43,7 +43,7 @@ public partial class DiffEditorDemoPage : SingleComponentPage
     {
         WellKnownModelKindStateWrap.StateChanged += WellKnownModelKindStateWrapOnStateChanged;        
         
-        TextEditorService.ModelRegisterTemplatedModel(
+        TextEditorService.Model.RegisterTemplated(
             DiffEditorDemoBeforeModelKey,
             WellKnownModelKind.CSharp,
             "textEditorDemoBefore.txt",
@@ -52,11 +52,11 @@ public partial class DiffEditorDemoPage : SingleComponentPage
             "ABCDEFG");
             //TEXT_EDITOR_DEMO_INITIAL_CONTENT);
         
-        TextEditorService.ViewModelRegister(
+        TextEditorService.ViewModel.Register(
             DiffEditorDemoBeforeViewModelKey,
             DiffEditorDemoBeforeModelKey);
 
-        TextEditorService.ModelRegisterTemplatedModel(
+        TextEditorService.Model.RegisterTemplated(
             DiffEditorDemoAfterModelKey,
             WellKnownModelKind.CSharp,
             "textEditorDemoAfter.txt",
@@ -65,11 +65,11 @@ public partial class DiffEditorDemoPage : SingleComponentPage
             "ABCDEFG");
             //TEXT_EDITOR_DEMO_INITIAL_CONTENT);
         
-        TextEditorService.ViewModelRegister(
+        TextEditorService.ViewModel.Register(
             DiffEditorDemoAfterViewModelKey,
             DiffEditorDemoAfterModelKey);
         
-        TextEditorService.DiffRegister(
+        TextEditorService.Diff.Register(
             DiffEditorDemoDiffModelKey,
             DiffEditorDemoBeforeViewModelKey,
             DiffEditorDemoAfterViewModelKey);
@@ -94,10 +94,10 @@ public partial class DiffEditorDemoPage : SingleComponentPage
         var localWellKnownModelState = WellKnownModelKindStateWrap.Value;
         
         var beforeModel = TextEditorService
-            .ModelFindOrDefault(DiffEditorDemoBeforeModelKey);
+            .Model.FindOrDefault(DiffEditorDemoBeforeModelKey);
         
         var afterModel = TextEditorService
-            .ModelFindOrDefault(DiffEditorDemoAfterModelKey);
+            .Model.FindOrDefault(DiffEditorDemoAfterModelKey);
         
         ILexer? lexer = null;
         IDecorationMapper? decorationMapper = null;
