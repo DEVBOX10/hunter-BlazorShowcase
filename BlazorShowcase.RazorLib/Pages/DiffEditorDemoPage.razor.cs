@@ -49,7 +49,7 @@ public partial class DiffEditorDemoPage : SingleComponentPage
             "textEditorDemoBefore.txt",
             DateTime.UtcNow,
             "C#",
-            "ABCDEFG");
+            "ABCDEFK");
             //TEXT_EDITOR_DEMO_INITIAL_CONTENT);
         
         TextEditorService.ViewModel.Register(
@@ -62,7 +62,7 @@ public partial class DiffEditorDemoPage : SingleComponentPage
             "textEditorDemoAfter.txt",
             DateTime.UtcNow,
             "C#",
-            "ABCDEFG");
+            "BHDEFCK");
             //TEXT_EDITOR_DEMO_INITIAL_CONTENT);
         
         TextEditorService.ViewModel.Register(
