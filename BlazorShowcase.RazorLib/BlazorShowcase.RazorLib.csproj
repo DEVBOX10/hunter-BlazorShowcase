@@ -12,8 +12,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Blazor.Text.Editor" Version="7.1.0" />
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.14" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Blazor.Text.Editor\BlazorTextEditor.RazorLib\BlazorTextEditor.RazorLib.csproj" />
     </ItemGroup>
 
 </Project>

@@ -43,33 +43,33 @@ public partial class DiffEditorDemoPage : SingleComponentPage
     {
         WellKnownModelKindStateWrap.StateChanged += WellKnownModelKindStateWrapOnStateChanged;        
         
-        TextEditorService.ModelRegisterTemplatedModel(
+        TextEditorService.Model.RegisterTemplated(
             DiffEditorDemoBeforeModelKey,
             WellKnownModelKind.CSharp,
             "textEditorDemoBefore.txt",
             DateTime.UtcNow,
             "C#",
-            "ABCDEFG");
+            "ABCDEFK");
             //TEXT_EDITOR_DEMO_INITIAL_CONTENT);
         
-        TextEditorService.ViewModelRegister(
+        TextEditorService.ViewModel.Register(
             DiffEditorDemoBeforeViewModelKey,
             DiffEditorDemoBeforeModelKey);
 
-        TextEditorService.ModelRegisterTemplatedModel(
+        TextEditorService.Model.RegisterTemplated(
             DiffEditorDemoAfterModelKey,
             WellKnownModelKind.CSharp,
             "textEditorDemoAfter.txt",
             DateTime.UtcNow,
             "C#",
-            "ABCDEFG");
+            "BHDEFCK");
             //TEXT_EDITOR_DEMO_INITIAL_CONTENT);
         
-        TextEditorService.ViewModelRegister(
+        TextEditorService.ViewModel.Register(
             DiffEditorDemoAfterViewModelKey,
             DiffEditorDemoAfterModelKey);
         
-        TextEditorService.DiffRegister(
+        TextEditorService.Diff.Register(
             DiffEditorDemoDiffModelKey,
             DiffEditorDemoBeforeViewModelKey,
             DiffEditorDemoAfterViewModelKey);
@@ -94,10 +94,10 @@ public partial class DiffEditorDemoPage : SingleComponentPage
         var localWellKnownModelState = WellKnownModelKindStateWrap.Value;
         
         var beforeModel = TextEditorService
-            .ModelFindOrDefault(DiffEditorDemoBeforeModelKey);
+            .Model.FindOrDefault(DiffEditorDemoBeforeModelKey);
         
         var afterModel = TextEditorService
-            .ModelFindOrDefault(DiffEditorDemoAfterModelKey);
+            .Model.FindOrDefault(DiffEditorDemoAfterModelKey);
         
         ILexer? lexer = null;
         IDecorationMapper? decorationMapper = null;
@@ -171,24 +171,4 @@ public partial class DiffEditorDemoPage : SingleComponentPage
         
         base.Dispose(disposing);
     }
-
-    private const string TEXT_EDITOR_DEMO_INITIAL_CONTENT = @"public class MyClass
-{
-    public List<int> _myInts = new()
-    {
-        1,
-        2,
-        3,
-    };
-    
-    public void MyMethod()
-    {
-        // A comment
-
-        var intValue = 2;
-        var stringValue = ""Hello World!"";
-
-        return;
-    }
-}";
 }

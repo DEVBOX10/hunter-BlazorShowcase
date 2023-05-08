@@ -37,7 +37,7 @@ public partial class Index : SingleComponentPage
     {
         WellKnownModelKindStateWrap.StateChanged += WellKnownModelKindStateWrapOnStateChanged;
         
-        TextEditorService.ModelRegisterTemplatedModel(
+        TextEditorService.Model.RegisterTemplated(
             TextEditorDemoModelKey,
             WellKnownModelKind.CSharp,
             "textEditorDemo.txt",
@@ -45,7 +45,7 @@ public partial class Index : SingleComponentPage
             "C#",
             TEXT_EDITOR_DEMO_INITIAL_CONTENT);
         
-        TextEditorService.ViewModelRegister(
+        TextEditorService.ViewModel.Register(
             TextEditorDemoViewModelKey,
             TextEditorDemoModelKey);
         
@@ -69,7 +69,7 @@ public partial class Index : SingleComponentPage
         var localWellKnownModelState = WellKnownModelKindStateWrap.Value;
         
         var demoModel = TextEditorService
-            .ModelFindOrDefault(TextEditorDemoModelKey);
+            .Model.FindOrDefault(TextEditorDemoModelKey);
         
         ILexer? lexer = null;
         IDecorationMapper? decorationMapper = null;
