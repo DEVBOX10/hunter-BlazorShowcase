@@ -171,24 +171,4 @@ public partial class DiffEditorDemoPage : SingleComponentPage
         
         base.Dispose(disposing);
     }
-
-    private const string TEXT_EDITOR_DEMO_INITIAL_CONTENT = @"public class MyClass
-{
-    public List<int> _myInts = new()
-    {
-        1,
-        2,
-        3,
-    };
-    
-    public void MyMethod()
-    {
-        // A comment
-
-        var intValue = 2;
-        var stringValue = ""Hello World!"";
-
-        return;
-    }
-}";
 }
