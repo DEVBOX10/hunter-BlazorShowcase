@@ -3,6 +3,7 @@ using BlazorCommon.RazorLib.ComponentRenderers;
 using BlazorCommon.RazorLib.Notification;
 using BlazorCommon.RazorLib.WatchWindow;
 using BlazorCommon.RazorLib.WatchWindow.TreeViewDisplays;
+using BlazorShowcase.RazorLib.Settings;
 using BlazorTextEditor.RazorLib;
 using Fluxor;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,10 +44,12 @@ public static class ServiceCollectionExtensions
         services.AddBlazorTextEditor(options => options with
         {
             InitializeFluxor = shouldInitializeFluxor,
+            SettingsComponentRendererType = typeof(SettingsDisplay),
+            SettingsDialogComponentIsResizable = true,
             BlazorCommonOptions = (options.BlazorCommonOptions ?? new()) with
             {
                 InitializeFluxor = shouldInitializeFluxor
-            }
+            },
         });
         
          return services.AddFluxor(options =>
