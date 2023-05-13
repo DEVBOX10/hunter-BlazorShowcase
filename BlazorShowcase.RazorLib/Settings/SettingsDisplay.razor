@@ -1,4 +1,5 @@
 ﻿@using BlazorCommon.RazorLib.Options
+@using BlazorCommon.RazorLib.RenderTracker
 @using BlazorTextEditor.RazorLib.Options
 
 <div class="bsrl_settings">
@@ -37,6 +38,19 @@
             <InputTextEditorShowWhitespace/>
             <InputTextEditorTheme/>
             <InputTextEditorKeymap/>
+        </div>
+    </div>
+    
+    <div class="bsrl_settings-scope">
+        <div class="bsrl_settings-scope-title bsrl_larger-font-size">
+            Misc
+        </div>
+        
+        <div class="bsrl_settings-scope-body bcrl_indent-child-content">
+            
+            <div class="bsrl_settings-scope-border"></div>
+            
+            <RenderTrackerDialogButton/>
         </div>
     </div>
 </div>
