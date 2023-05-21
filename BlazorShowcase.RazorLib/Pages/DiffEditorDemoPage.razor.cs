@@ -99,7 +99,7 @@ public partial class DiffEditorDemoPage : SingleComponentPage
         var afterModel = TextEditorService
             .Model.FindOrDefault(DiffEditorDemoAfterModelKey);
         
-        ILexer? lexer = null;
+        ITextEditorLexer? lexer = null;
         IDecorationMapper? decorationMapper = null;
         
         switch (localWellKnownModelState.WellKnownModelKind)
