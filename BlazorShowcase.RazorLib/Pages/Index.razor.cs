@@ -71,7 +71,7 @@ public partial class Index : SingleComponentPage
         var demoModel = TextEditorService
             .Model.FindOrDefault(TextEditorDemoModelKey);
         
-        ILexer? lexer = null;
+        ITextEditorLexer? lexer = null;
         IDecorationMapper? decorationMapper = null;
         
         switch (localWellKnownModelState.WellKnownModelKind)
